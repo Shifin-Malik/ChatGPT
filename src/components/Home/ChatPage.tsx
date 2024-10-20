@@ -1,6 +1,6 @@
 import { BiMenuAltLeft } from "react-icons/bi";
 import { FiEdit } from "react-icons/fi";
-import ChatGPTT from '../../../public/images/ChatGPTT.png';
+import ChatGPT2 from '../../../public/images/ChatGPT2.png';
 import { Input } from "@material-tailwind/react";
 
 function ChatPage() {
@@ -16,7 +16,7 @@ function ChatPage() {
       {/* Centered Image */}
       <div className="flex justify-center items-center h-[calc(100vh-120px)]">
         <img
-          src={ChatGPTT}
+          src={ChatGPT2}
           alt="ChatGPT Logo"
           className="w-20 h-20 object-contain"
         />
