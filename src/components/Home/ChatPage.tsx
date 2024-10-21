@@ -1,15 +1,19 @@
 import { BiMenuAltLeft } from "react-icons/bi";
 import { FiEdit } from "react-icons/fi";
 import ChatGPT2 from '../../../public/images/ChatGPT2.png';
-import { Input } from "@material-tailwind/react";
+
+import { Link } from "react-router-dom";
+
 
 function ChatPage() {
   return (
-    <div className="fixed h-screen w-full mt-2 prose prose-invert">
+    <div className="fixed h-screen w-full mt-2 min-w-max prose prose-invert">
       {/* Header */}
       <div className="flex justify-between items-center w-full px-3">
         <BiMenuAltLeft className="text-white text-2xl" />
-        <h5 className="font-semibold text-violet-600">Get Plus +</h5>
+        <Link to=""> {/* Update the link to navigate to a new page */}
+          <h5 className="font-semibold text-violet-600">Get Plus +</h5>
+        </Link>
         <FiEdit className="text-zinc-700 text-xl" />
       </div>
       
@@ -23,16 +27,18 @@ function ChatPage() {
       </div>
 
       {/* Input Box */}
-      <div className="md:w-[1330px] w-[350px] mx-3 mt-5 flex gap-4">
-      <div className="relative flex-1">
-        <Input
-          type="text"
-          placeholder="Search"
-          className="!h-12 pl-12 bg-zinc-800 rounded-full   placeholder:text-gray-500 !focus:border-gray-900 !focus:ring-gray-900/10" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined} success={undefined}          />
-        
-      </div>
      
-    </div>
+     <div className="flex flex-col space-y-2  items-center ">
+     <input
+        type="text"
+        id="inputField"
+        className="w-80 md:w-full bg-black border border-gray-300 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="Message Chatgpt"
+      />
+     </div>
+    
+
+     
     </div>
   );
 }
